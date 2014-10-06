@@ -1,6 +1,8 @@
 #!/usr/bin/perl -W
 use Data::Dumper;
 
+
+# Converte os dados em origin em uma string unica e continua
 sub origin2string {
     my ($entry) = @_;
     my $result;  
@@ -14,6 +16,8 @@ sub origin2string {
     return $result; 
 }
 
+
+#converte uma entrada genbak em uma entrada fasta
 sub convert_entry {
      my ($entry) = @_;
      my $result = ">";
@@ -58,7 +62,6 @@ sub convert_entry {
      return $result;
 }
 
-#convertendo arquivo fasta numa hash
 $arquivo_fasta = $ARGV[0];
 
 # Testando a existência do arquivo
